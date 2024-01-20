@@ -8,7 +8,7 @@ public class CicdGitactionApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(CicdGitactionApplication.class, args);
-		System.out.println("dsadsadsa");
+		System.out.println("dsadsadsadsads");
 	}
 
 }
