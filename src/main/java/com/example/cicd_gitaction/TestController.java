@@ -13,7 +13,7 @@ public class TestController {
     @RequestMapping(value = "validateEmail", method = RequestMethod.POST)
     public ResponseEntity<String> validateEmail(@RequestBody String email) {
         if (emailValidator.isValid(email)) {
-            return ResponseEntity.ok("Valid")
+            return ResponseEntity.ok("Valid");
         } else {
             return ResponseEntity.badRequest().body("Invalid");
         }
