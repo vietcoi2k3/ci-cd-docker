@@ -29,4 +29,4 @@ jobs:
         chmod 600 Test.pem
 
     - name: SSH and Pull Code
-      run: ssh -o StrictHostKeyChecking=no -i "Test.pem" ubuntu@ec2-54-206-117-152.ap-southeast-2.compute.amazonaws.com "git pull origin main"
+      run: ssh -o StrictHostKeyChecking=no -i "Test.pem" ubuntu@ec2-54-206-117-152.ap-southeast-2.compute.amazonaws.com "cd ci-cd-docker; git pull origin main"
