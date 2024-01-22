@@ -31,5 +31,8 @@ jobs:
       run: mvn -B package --file pom.xml
     - name: Run test
       run : mvn test
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 48d1a5f4ff2fde5331fac735b9d4c067b80a2c7e
