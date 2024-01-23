@@ -35,5 +35,4 @@ jobs:
         git pull origin main;
         docker stop <container_name_or_id>;
         docker build -t <image_name> .;
-        docker run -d --name <container_name> <image_name>;
-    "
+        docker run -d --name <container_name> <image_name>;"
