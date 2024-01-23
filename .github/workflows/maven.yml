@@ -28,5 +28,12 @@ jobs:
         echo "${{ secrets.SSH_PRIVATE_KEY }}" > Test.pem
         chmod 600 Test.pem
 
-    - name: SSH and Pull Code
-      run: ssh -o StrictHostKeyChecking=no -i "Test.pem" ubuntu@ec2-54-206-117-152.ap-southeast-2.compute.amazonaws.com "cd ci-cd-docker; git pull origin main"
+    - name: SSH and Execute Commands
+      run: |
+        ssh -o StrictHostKeyChecking=no -i "Test.pem" ubuntu@ec2-54-206-117-152.ap-southeast-2.compute.amazonaws.com "
+        cd ci-cd-docker;
+        git pull origin main;
+        docker stop <container_name_or_id>;
+        docker build -t <image_name> .;
+        docker run -d --name <container_name> <image_name>;
+    "
