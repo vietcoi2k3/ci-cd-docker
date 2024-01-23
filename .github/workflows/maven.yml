@@ -30,8 +30,8 @@ jobs:
 
     - name: SSH and Execute Commands
       run: |
-        ssh -i "Test.pem" ubuntu@ec2-13-236-191-12.ap-southeast-2.compute.amazonaws.com "
-        cd ci-cd-docker;
+        ssh -i "Test.pem" ubuntu@ec2-13-236-191-12.ap-southeast-2.compute.amazonaws.com
+        "cd ci-cd-docker;
         git pull origin main;
         docker stop cicd_demo;
         docker rm cicd_demo
