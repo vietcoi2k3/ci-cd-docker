@@ -33,6 +33,6 @@ jobs:
         ssh -o StrictHostKeyChecking=no -i "Test.pem" ubuntu@ec2-54-206-117-152.ap-southeast-2.compute.amazonaws.com "
         cd ci-cd-docker;
         git pull origin main;
-        docker stop <container_name_or_id>;
-        docker build -t <image_name> .;
-        docker run -d --name <container_name> <image_name>;"
+        docker stop cicd_demo;
+        docker build -t cicd_demo .;
+        docker run -d --name cicd_demo cicd_demo;"
