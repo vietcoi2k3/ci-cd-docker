@@ -34,5 +34,6 @@ jobs:
         cd ci-cd-docker;
         git pull origin main;
         docker stop cicd_demo;
+        docker rm cicd_demo
         docker build -t cicd_demo .;
-        docker run -d --name cicd_demo cicd_demo;"
+        docker run -d -p 8080:8080 --name cicd_demo cicd_demo;"
