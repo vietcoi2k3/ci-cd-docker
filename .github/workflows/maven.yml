@@ -30,4 +30,4 @@ jobs:
 
     - name: SSH and Execute Commands
       run: |
-        ssh -o StrictHostKeyChecking=no -i "Test.pem" ubuntu@ec2-13-236-191-12.ap-southeast-2.compute.amazonaws.com "cd ci-cd-docker; git pull origin main; docker stop cicd_demo; docker rm cicd_demo; docker build -t cicd_demo .; docker run -d -p 8080:8080 --name cicd_demo cicd_demo;"
+        ssh -o StrictHostKeyChecking=no -i "Test.pem" ubuntu@ec2-54-206-117-152.ap-southeast-2.compute.amazonaws.com "cd ci-cd-docker; git pull origin main; docker stop cicd_demo; docker rm cicd_demo; docker build -t cicd_demo .; docker run -d -p 8080:8080 --name cicd_demo cicd_demo;"
