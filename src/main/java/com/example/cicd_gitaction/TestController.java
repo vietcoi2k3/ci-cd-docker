@@ -23,9 +23,4 @@ public class TestController {
     public String hello(){
         return "Heloo";
     }
-
-    @RequestMapping(value = "hellooo",method = RequestMethod.GET)
-    public String helloWorld(){
-        return "Heloo";
-    }
 }
