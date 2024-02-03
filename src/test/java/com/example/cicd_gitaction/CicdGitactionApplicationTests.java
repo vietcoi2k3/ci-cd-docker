@@ -19,7 +19,7 @@ class CicdGitactionApplicationTests {
 		String email = "example@gmail.com";
 		ResponseEntity<String> response = restTemplate.postForEntity("/validateEmail?email=" + email, null, String.class);
 		assertEquals(HttpStatus.OK, response.getStatusCode());
-		assertEquals("Valid", response.getBody());
+		assertEquals(0,1);
 	}
 
 	@Test
